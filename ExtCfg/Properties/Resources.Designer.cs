@@ -63,18 +63,18 @@ namespace ExtCfg.Properties {
         /// <summary>
         ///   查找类似 转换类型时出现异常 的本地化字符串。
         /// </summary>
-        internal static string E_Cast {
+        internal static string ERR_CAST {
             get {
-                return ResourceManager.GetString("E_Cast", resourceCulture);
+                return ResourceManager.GetString("ERR_CAST", resourceCulture);
             }
         }
         
         /// <summary>
         ///   查找类似 解析配置文件时出现异常 的本地化字符串。
         /// </summary>
-        internal static string E_Load {
+        internal static string ERR_LOAD {
             get {
-                return ResourceManager.GetString("E_Load", resourceCulture);
+                return ResourceManager.GetString("ERR_LOAD", resourceCulture);
             }
         }
     }

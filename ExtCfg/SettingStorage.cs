@@ -21,12 +21,12 @@ namespace ExtCfg
             {
                 case Format.JSON:
                     {
-                        new JSONExc().Load(FileName, Root);
+                        new JSONExchanger().Load(FileName, Root);
                         break;
                     }
                 case Format.INI:
                     {
-                        new INIExc().Load(FileName, Root);
+                        new INIExchanger().Load(FileName, Root);
                         break;
                     }
             }
@@ -37,12 +37,12 @@ namespace ExtCfg
             {
                 case Format.JSON:
                     {
-                        new JSONExc().Save(FileName, Root);
+                        new JSONExchanger().Save(FileName, Root);
                         break;
                     }
                 case Format.INI:
                     {
-                        new INIExc().Save(FileName, Root);
+                        new INIExchanger().Save(FileName, Root);
                         break;
                     }
             }

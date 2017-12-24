@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ExtCfg.Exchanger
 {
-    class INIExc : Exc
+    class INIExchanger : Exchanger
     {
         public override void Load(string path, SettingNode settingNode)
         {
@@ -21,7 +21,7 @@ namespace ExtCfg.Exchanger
             }
             catch (SettingException e)
             {
-                throw new SettingException(Resources.E_Load,e);
+                throw new SettingException(Resources.ERR_LOAD,e);
             }
         }
         private void LoadINI(string s, SettingNode settingNode)

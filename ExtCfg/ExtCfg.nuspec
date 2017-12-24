@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/xyning/ExtCfg</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>naf</releaseNotes>
+    <releaseNotes></releaseNotes>
     <copyright>Copyright 2017</copyright>
   </metadata>
 </package>

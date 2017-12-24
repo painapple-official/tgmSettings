@@ -12,32 +12,11 @@ namespace ExtCfg_Test
         {
             {
                 SettingStorage settingStorage = new SettingStorage("test.ini", Format.INI);
-                settingStorage["n1"]["k1"] = "v1";
-                settingStorage["n2"]["k2"] = "v2";
-                settingStorage["n2"]["k3"] = "v3";
+                settingStorage["n1"]["k1"] = 1;
                 settingStorage.Save();
-                Console.ReadKey();
-            }
-            {
-                SettingStorage settingStorage = new SettingStorage("test.ini", Format.INI);
-                Console.WriteLine(settingStorage["n1"]["k1"]);
-                Console.WriteLine(settingStorage["n2"]["k2"]);
-                Console.WriteLine(settingStorage["n2"]["k3"]);
-                Console.ReadKey();
-            }
-            {
-                SettingStorage settingStorage = new SettingStorage("test.json");
-                settingStorage["n1"]["k1"] = "v1";
-                settingStorage["n2"]["k2"] = "v2";
-                settingStorage["n2"]["n3"]["k3"] = "v3";
-                settingStorage.Save();
-                Console.ReadKey();
-            }
-            {
-                SettingStorage settingStorage = new SettingStorage("test.json");
-                Console.WriteLine(settingStorage["n1"]["k1"]);
-                Console.WriteLine(settingStorage["n2"]["k2"]);
-                Console.WriteLine(settingStorage["n2"]["n3"]["k3"]);
+                Console.WriteLine(settingStorage["n1"]["k1"].AsInt(0));
+                Console.WriteLine(settingStorage["n1"]["k2"].AsInt(0));
+                Console.WriteLine(settingStorage["n1"]["k2"].AsInt());
                 Console.ReadKey();
             }
         }

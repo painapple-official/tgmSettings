@@ -7,7 +7,7 @@ using System.Text;
 
 namespace ExtCfg.Exchanger
 {
-    class JSONExc : Exc
+    class JSONExchanger : Exchanger
     {
         public override void Load(string path, SettingNode settingNode)
         {
@@ -24,7 +24,7 @@ namespace ExtCfg.Exchanger
             }
             catch (Exception e)
             {
-                throw new SettingException(Resources.E_Load, e);
+                throw new SettingException(Resources.ERR_LOAD, e);
             }
         }
 

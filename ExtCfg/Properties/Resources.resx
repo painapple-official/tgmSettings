@@ -117,10 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="E_Cast" xml:space="preserve">
+  <data name="ERR_CAST" xml:space="preserve">
     <value>转换类型时出现异常</value>
   </data>
-  <data name="E_Load" xml:space="preserve">
+  <data name="ERR_LOAD" xml:space="preserve">
     <value>解析配置文件时出现异常</value>
   </data>
 </root>
