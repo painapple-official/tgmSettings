@@ -41,6 +41,8 @@ namespace ExtCfg
         public static implicit operator SettingNode(long b) => new SettingNode(null, b.ToString());
         public static implicit operator SettingNode(short b) => new SettingNode(null, b.ToString());
         public static implicit operator SettingNode(bool b) => new SettingNode(null, b.ToString().ToLower());
+        public static implicit operator SettingNode(float b) => new SettingNode(null, b.ToString());
+        public static implicit operator SettingNode(double b) => new SettingNode(null, b.ToString());
 
         public string Key { get; private set; }
         public string Value { get; private set; }
@@ -112,6 +114,64 @@ namespace ExtCfg
             try
             {
                 return AsShort();
+            }
+            catch
+            {
+                return Default;
+            }
+        }
+
+        /// <summary>
+        /// 获得该设置项表示的Float类型
+        /// </summary>
+        /// <exception cref="SettingException">无法转换到Float类型</exception>
+        public float AsFloat()
+        {
+            Single o;
+            if (Single.TryParse(Value, out o))
+            {
+                return o;
+            }
+            return err<Single>();
+        }
+        /// <summary>
+        /// 获得该设置项表示的Float类型，出现异常时将返回默认值
+        /// </summary>
+        /// <param name="Default">默认值</param>
+        public float AsFloat(float Default)
+        {
+            try
+            {
+                return AsFloat();
+            }
+            catch
+            {
+                return Default;
+            }
+        }
+
+        /// <summary>
+        /// 获得该设置项表示的Double类型
+        /// </summary>
+        /// <exception cref="SettingException">无法转换到Double类型</exception>
+        public double AsDouble()
+        {
+            Double o;
+            if (Double.TryParse(Value, out o))
+            {
+                return o;
+            }
+            return err<Double>();
+        }
+        /// <summary>
+        /// 获得该设置项表示的Double类型，出现异常时将返回默认值
+        /// </summary>
+        /// <param name="Default">默认值</param>
+        public double AsDouble(double Default)
+        {
+            try
+            {
+                return AsDouble();
             }
             catch
             {
